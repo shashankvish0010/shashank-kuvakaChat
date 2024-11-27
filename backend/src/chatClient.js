@@ -10,22 +10,25 @@ const rl = readline.createInterface({
 let clientName = null;
 
 // Connect to the chat server
-const client = net.createConnection({ port: 8080 }, () => {
-  console.log("Connected to the chat server!");
-  // Prompt the user to enter their name
-  rl.question("Please enter your full name: ", (name) => {
-    clientName = name.trim();
-    if (clientName) {
-      console.log(`Welcome, ${clientName}! You can now start chatting.`);
-      client.write(`You can now chat with ${clientName}.`);
-      promptMessage(); // Start chat after entering the name
-    } else {
-      console.log("Name cannot be empty. Exiting...");
-      client.end();
-      process.exit(0);
-    }
-  });
-});
+const client = net.createConnection(
+  { host: "https://kuvaka-shashank-chatapp.onrender.com", port: 8080 },
+  () => {
+    console.log("Connected to the chat server!");
+    // Prompt the user to enter their name
+    rl.question("Please enter your full name: ", (name) => {
+      clientName = name.trim();
+      if (clientName) {
+        console.log(`Welcome, ${clientName}! You can now start chatting.`);
+        client.write(`You can now chat with ${clientName}.`);
+        promptMessage(); // Start chat after entering the name
+      } else {
+        console.log("Name cannot be empty. Exiting...");
+        client.end();
+        process.exit(0);
+      }
+    });
+  }
+);
 
 // Handle incoming messages from the server
 client.on("data", (data) => {
