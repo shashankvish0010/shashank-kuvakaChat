@@ -11,7 +11,7 @@ let clientName = null;
 
 // Connect to the chat server
 const client = net.createConnection(
-  { host: "https://kuvaka-shashank-chatapp.onrender.com", port: 8080 },
+  { host: "https://kuvaka-shashank-chatapp.onrender.com" },
   () => {
     console.log("Connected to the chat server!");
     // Prompt the user to enter their name
