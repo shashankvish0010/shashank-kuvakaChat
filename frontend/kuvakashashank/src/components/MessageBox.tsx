@@ -12,7 +12,7 @@ interface messagebox {
 const MessageBox: React.FC<messagebox> = (props) => {
   return (
     <div
-      className={`${props.bgcolor} ${props.textcolor} md:min-w-min border-2 border-gray-100 md:max-w-[50vw] w-max p-2 rounded-lg ${props.margin}-auto`}
+      className={`${props.bgcolor} ${props.textcolor} md:min-w-min border-2 border-gray-100 md:max-w-[50vw] w-max p-2 rounded-lg ${props.margin}`}
     >
       <span>
         <p className="text-xs font-normal">{props.user}</p>

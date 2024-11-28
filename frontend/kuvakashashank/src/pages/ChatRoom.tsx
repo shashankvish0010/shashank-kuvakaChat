@@ -28,7 +28,7 @@ const ChatRoom: React.FC = () => {
                   <MessageBox
                     bgcolor="bg-blue-600"
                     textcolor="text-white"
-                    margin="ml"
+                    margin="ml-auto"
                     user="You"
                     data={message.data}
                   />
@@ -36,7 +36,7 @@ const ChatRoom: React.FC = () => {
                   <MessageBox
                     bgcolor="bg-white"
                     textcolor="text-black"
-                    margin="mr"
+                    margin="mr-auto"
                     user={message.sendername}
                     data={message.data}
                   />
