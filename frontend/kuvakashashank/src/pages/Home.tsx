@@ -9,9 +9,9 @@ const Home: React.FC = () => {
   return (
     //Home page developed to get username also a bit of herosection to display my name and few links.
     <div className="bg-blue-600 text-white min-h-screen h-max w-screen flex flex-col items-center justify-evenly gap-3 p-5">
-      <div className="font-semibold flex flex-col items-center justify-center gap-5 p-3">
+      <div className="font-semibold flex flex-col justify-center items-center gap-5 p-3">
         <h2 className="logo text-3xl md:text-5xl">Kuvaka Chat App</h2>
-        <p className="title text-xl md:text-2xl">
+        <p className="title text-center text-xl md:text-2xl">
           Designed & Developed by{" "}
           <span className="text-yellow-300">
             <a
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
           <h1 className="text-2xl text-blue-600 text-center font-semibold">
             Please enter your name
           </h1>
-          <span className="w-[100%] h-[0.2rem] bg-slate-800 rounded"></span>
+          <span className="w-[100%] h-[0.2rem] bg-blue-600 rounded"></span>
           <span className="flex flex-col gap-1">
             <p className="text-base text-gray-600">Enter Name</p>
             <input
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
               }
             />
           </span>
-          <span className="w-[100%] flex items-center justify-evenly">
+          <span className="w-[100%] gap-2 flex items-center justify-evenly">
             <p className="text-black">Want to check the actual code? </p>
             <span className="text-blue-600 cursor-pointer hover:font-medium">
               <a
